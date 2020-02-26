@@ -8,7 +8,7 @@ header:enlist["Content-Type"]!enlist"application/vnd.kafka.v2+json";
 consumerHeaders:enlist["Accept"]!enlist"application/vnd.kafka.binary.v2+json";
 
 // create consumer instance in a consumer group named 'myNewGroup'
-{baseURI::last .j.k req[consumerGroupURL;`POST;header;.j.j(`name`format`auto.offset.reset)!(x,`binary`earliest)]}instName;
+baseURI:last .j.k req[consumerGroupURL;`POST;header;.j.j(`name`format`auto.offset.reset)!(instName,`binary`earliest)];
 
 // consumer instance subscribe to the topic '3partTopic'
 req[baseURI,"/subscription";`POST;header;"{\"topics\":[\"3partTopic\"]}"];
