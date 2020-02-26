@@ -1,6 +1,6 @@
 k)req:{[url;method;hd;bd]d:s,s:"\r\n";url:$[10=@url;url;1_$url];p:{$[#y;y;x]}/getenv`$_:\("HTTP";"NO"),\:"_PROXY";u:.Q.hap@url;t:~(~#*p)||/(*":"\:u 2)like/:{(("."=*x)#"*"),x}'","\:p 1;a:$[t;p:.Q.hap@*p;u]1;(4+*r ss d)_r:(`$":",,/($[t;p;u]0 2))($method)," ",$[t;url;u 3]," HTTP/1.1",s,(s/:("Connection: close";"Host: ",u 2),((0<#a)#,$[t;"Proxy-";""],"Authorization: Basic ",.Q.btoa a),($[#hd;(!hd),'": ",/:. hd;()])),($[#bd;(s,"Content-length: ",$#bd),d,bd;d])}
 
-data:10?get`:data;
+data:update symCol:10#`red`purple`yellow from flip`longCol`floatCol`dateCol`timeCol`stringCol`boolCol!10?/:(10;10f;.z.D;.z.T;0N 3#.Q.a;0b);
 
 buildKeyValueObjects:{"{\"key\":\"",(.Q.btoa string y x),"\",\"value\":\"",(.Q.btoa`char$-18!y),"\"}"};
 
